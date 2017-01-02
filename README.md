@@ -17,6 +17,7 @@ In the Dockerfile the user twonky is created and used to run the twonky server i
 docker build -t="twonky_alpine" .
 
 # Run the image and mount local media directory to it
+be careful concerning the permissions (Docker does not know the local user in the host)
 docker run --name twonky -p 9000:9000 -v /usr/share/httpd/icons:/home/twonky/media -it twonky_alpine
 
 --------------------------------
