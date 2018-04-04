@@ -9,7 +9,7 @@ ENV TWONKY_PORT 9000 #fix
 RUN apk add --update bash wget unzip supervisor
 
 # download twonky
-RUN wget http://www.twonkyforum.com/downloads/${TWONKY_VERSION}/twonky-x86-64-glibc-2.9-"${TWONKY_VERSION}".zip
+RUN wget ttp://download.twonky.com/$TWONKY_VERSION/twonky-i686-glibc-2.9-$TWONKY_VERSION.zip
 #RUN wget ttp://download.twonky.com/${TWONKY_VERSION}/twonky-i686-glibc-2.9-"${TWONKY_VERSION}".zip
 
 # unzip package
@@ -35,7 +35,7 @@ RUN sed -i 's/--no-headers//g' /usr/local/twonky/twonky.sh
 # cleanup
 RUN apk del wget
 RUN apk del unzip
-RUN rm twonky-i686-glibc-2.9-"${TWONKY_VERSION}".zip
+RUN rm twonky-i686-glibc-2.9-$TWONKY_VERSION.zip
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
