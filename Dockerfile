@@ -9,8 +9,8 @@ ENV TWONKY_PORT 9000 #fix
 RUN apk add --update bash wget unzip supervisor
 
 # download twonky
-RUN wget ttp://download.twonky.com/$TWONKY_VERSION/twonky-i686-glibc-2.9-$TWONKY_VERSION.zip
-#RUN wget ttp://download.twonky.com/${TWONKY_VERSION}/twonky-i686-glibc-2.9-"${TWONKY_VERSION}".zip
+RUN wget http://download.twonky.com/$TWONKY_VERSION/twonky-i686-glibc-2.9-$TWONKY_VERSION.zip
+#RUN wget http://download.twonky.com/${TWONKY_VERSION}/twonky-i686-glibc-2.9-"${TWONKY_VERSION}".zip
 
 # unzip package
 RUN mkdir -p /usr/local/twonky
