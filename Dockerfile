@@ -2,7 +2,7 @@
 FROM frolvlad/alpine-glibc
 MAINTAINER Gernot Grames <gernot.grames@gmx.at>
 ENV container docker
-ENV UPDATED_ON "22 December 2016"
+ENV UPDATED_ON "04 April 2018"
 ENV TWONKY_VERSION 8.5
 ENV TWONKY_PORT 9000 #fix
 
