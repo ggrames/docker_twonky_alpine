@@ -3,7 +3,7 @@
 -----------------------------------------------
 # Twonky Server
 Internet download 
-* Server version: 8.3 (twonky-x86-64-glibc-2.9-8.3) 
+* Server version: 8.5 (twonky-x86-64-glibc-2.9-8.5) 
 
 ----------------------------------
 ## User
