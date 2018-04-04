@@ -3,17 +3,17 @@ FROM frolvlad/alpine-glibc
 MAINTAINER Gernot Grames <gernot.grames@gmx.at>
 ENV container docker
 ENV UPDATED_ON "22 December 2016"
-ENV TWONKY_VERSION 8.3
+ENV TWONKY_VERSION 8.5
 ENV TWONKY_PORT 9000 #fix
 
 RUN apk add --update bash wget unzip supervisor
 
 # download twonky
-RUN wget http://www.twonkyforum.com/downloads/8.3/twonky-x86-64-glibc-2.9-"${TWONKY_VERSION}".zip
+RUN wget ttp://download.twonky.com/${TWONKY_VERSION}/twonky-i686-glibc-2.9-"${TWONKY_VERSION}".zip
 
 # unzip package
 RUN mkdir -p /usr/local/twonky
-RUN unzip twonky-x86-64-glibc-2.9-"${TWONKY_VERSION}".zip -d /usr/local/twonky
+RUN unzip twonky-i686-glibc-2.9-"${TWONKY_VERSION}".zip -d /usr/local/twonky
 
 # set execute bit
 RUN chmod 705 /usr/local/twonky/twonky* /usr/local/twonky/cgi-bin/* /usr/local/twonky/plugins/*
@@ -34,7 +34,7 @@ RUN sed -i 's/--no-headers//g' /usr/local/twonky/twonky.sh
 # cleanup
 RUN apk del wget
 RUN apk del unzip
-RUN rm twonky-x86-64-glibc-2.9-"${TWONKY_VERSION}".zip
+RUN rm twonky-i686-glibc-2.9-"${TWONKY_VERSION}".zip
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
